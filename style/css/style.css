@@ -1,0 +1,106 @@
+html, body {
+    height: 100vh;
+}
+
+* {
+    font-family: 'Share Tech', sans-serif;
+}
+
+.list-group {
+    display: none;
+}
+
+.bg-cinza{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.bg-cinza-claro{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.list-group-item-cinza {
+    /* border-right-color: #ffffff; */
+    color: #ffffff;
+}
+
+.list-group-item-cinza:first-child, .list-group-item-cinza:last-child{
+    border-radius: 0;
+}
+
+/* #menuNav {
+    display: none;
+} */
+
+#btnMenu {
+    background-color: transparent;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.dropdown-divider {
+    border-color: #000000;
+}
+
+#opDropdownConta {
+    display: none;
+}
+
+#editarDados {
+    display: block;
+}
+
+#deletarConta {
+    display: none;
+}
+
+#btnComentario {
+    margin: 0 auto;
+    display: block;
+}
+
+#comentarioPost, #btnPostarComentario, #textoComentarioFeito {
+    display: none;
+}
+
+#comentarioPost {
+    color: #d1cdcd;
+    width: 98%;
+}
+
+#comentarioPost:focus {
+    color: #000000;
+}
+
+#btnPostarComentario {
+    width: 50%;
+}
+
+.position-relative {
+    top: -50px;
+}
+
+.bg-branco {
+    background-color: #fff
+}
+
+@media screen and (min-width: 992px) {
+    #menuNav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #btnMenu {
+        display: none;
+    }
+
+    .list-group-item-cinza {
+        border-right-color: #ffffff;
+    }
+
+    #btnPostarComentario {
+        width: 10%;
+    }
+}
+

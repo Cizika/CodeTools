@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Equipe CodeTools">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/compiler/bootstrap.css">
+    <link rel="stylesheet" href="style/css/style.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech&display=swap" rel="stylesheet">
+
+    <title>Code Tools</title>
+</head>
+
+<body>
+
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+        <!-- <div class="container"> -->
+
+        <!-- Botão sandwich -->
+        <button class="btn btn-outline-light" type="button" id="btnMenu" data-toggle="collapse" data-target="#menuNav"
+            aria-expanded="false" aria-controls="menuNav">
+            <i class="fa fa-bars text-white" aria-hidden="true"></i>
+        </button>
+
+        <!-- Nome da plataforma -->
+        <a href="#" class="navbar-brand h1 mb-0"> <i class="fa fa-cogs text-white" aria-hidden="true"></i> Code
+            Tools</a>
+
+        <!-- Barra de pesquisa -->
+        <form class="form-inline d-none d-lg-inline w-50">
+            <input type="search" class="form-control w-75" placeholder="Pesquisar elemento">
+            <button type="button" class="btn btn-outline-light ml-2 cursor-pointer" id="btnPesquisa"> <i
+                    class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </form>
+
+        <!-- Acesso para outras páginas -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#" class="dropdownConta"><i class="fa fa-user text-white" aria-hidden="true"></i></a>
+                <a href="#" class="nav-link d-none d-lg-inline dropdownConta"> Minha conta</a>
+            </li>
+
+            <li class="nav-item ml-lg-2">
+                <a href="#"><i class="fa fa-question-circle text-white linkCentralAjuda" aria-hidden="true"></i></a>
+                <a href="#" class="nav-link d-none d-lg-inline linkCentralAjuda">Central de ajuda</a>
+            </li>
+        </ul>
+        <!-- </div> -->
+    </nav>
+
+    <!-- Opções do menu 'Minha conta' -->
+    <div id="opDropdownConta" class="text-center">
+        <a class="dropdown-item" href="#">Editar dados</a>
+        <!--Adicionar endereço da página-->
+        <a class="dropdown-item" href="#">Deletar conta</a>
+        <!--Adicionar endereço da página-->
+        <a class="dropdown-item" href="#">Sair</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" data-toggle="modal" data-target="#modalLogin">Entrar</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" data-toggle="modal" data-target="#modalConta">Criar conta</a>
+    </div>
+
+    <!-- Opções menu -->
+    <div class="collapse list-group text-center" id="menuNav">
+        <!-- <div class="col-lg-3"> -->
+        <a href="#" class="list-group-item list-group-item-action list-group-item-cinza bg-cinza">HTML 5</a>
+        <!--Adicionar endereço da página-->
+        <!-- </div> -->
+
+        <!-- <div class="col-lg-3"> -->
+        <a href="#" class="list-group-item list-group-item-action list-group-item-cinza bg-cinza">CSS 3</a>
+        <!--Adicionar endereço da página-->
+        <!-- </div> -->
+
+        <!-- <div class="col-lg-3"> -->
+        <a href="#" class="list-group-item list-group-item-action list-group-item-cinza bg-cinza">BOOTSTRAP 4</a>
+        <!--Adicionar endereço da página-->
+        <!-- </div> -->
+
+        <!-- <div class="col-lg-3"> -->
+        <a href="#" class="list-group-item list-group-item-action list-group-item-cinza bg-cinza">HTML 5 + CSS 3 +
+            BOOTSTRAP 4</a>
+        <!--Adicionar endereço da página-->
+        <!-- </div> -->
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Central de ajuda</h1>
+            </div>
+            <!-- Definir tópicos -->
+            <div class="d-none d-lg-block col-lg-3 bg-cinza-claro text-center" style="height: 100vh;">
+                <h3 class="mt-2">Principais tópicos</h3>
+            </div>
+            <div class="col-sm-12 col-lg-9 border border-bottom-0 border-right-0 border-left-0 border-secondary">
+                <!-- Aviso comentário postado -->
+                <p class="text-success text-center mb-1" id="textoComentarioFeito">Comentário postado com sucesso!</p>
+
+                <button class="btn bg-cinza-claro cursor-pointer mt-2 float-lg-right" id="btnComentario">Postar
+                    comentário</button>
+
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center">
+                        <!-- Post comentário -->
+                        <textarea class="mt-2" name="comentarioPost" id="comentarioPost" cols="104"
+                            rows="5">Digite seu comentário</textarea>
+                    </div>
+
+                    <div class="col-12 d-flex justify-content-center justify-content-lg-end">
+                        <button type="submit" class="btn bg-cinza-claro cursor-pointer mt-2"
+                            id="btnPostarComentario">Postar</button>
+                    </div>
+                </div>
+
+                <!-- Comentários -->
+                <div id="comentarios">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
